@@ -1,22 +1,22 @@
 .work{
 	&__gallery{
 		display: flex;
-		flex-direction: column;
 		gap: 30px;
-		@media screen and (min-width:1024px) {
-			grid-template-columns: repeat(4, 1fr);
-		}
-		@media screen and (min-width:768px) and (max-width:1023.9px){
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@media screen and (min-width:768px) {
-			display: grid;
-		}
+		flex-wrap: wrap;
+		display: flex;
+	
 		&__item{
 			position: relative;
 			aspect-ratio: 302 / 300;
 			height: fit-content;
-			display: flex;
+			
+			width: 100%;
+			@media screen and (min-width:1024px) {
+				width: calc((100% / 4) - 23px);
+			}
+			@media screen and (min-width:768px) and (max-width:1023.9px){
+				width: calc((100% / 2) - 23px);
+			}
 			.simple{
 				width: fit-content;
 				position: absolute;
@@ -33,6 +33,8 @@
 			img{
 				aspect-ratio: inherit;
 				object-fit: cover;
+				width: 100%;
+				height: 100%;
 			}
 		}
 	}
