@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./assets/style/lightbox.css">
+	<link rel="stylesheet" href="./assets/style/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+		<div class="header__top">
+				<div class="header__linkpoint">
+						<div class="header__social socials">
+						<a href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+								<path d="M7.5341 1.75598C6.00208 1.75598 4.53282 2.36457 3.44952 3.44787C2.36622 4.53117 1.75763 6.00044 1.75763 7.53245V14.4677C1.75763 15.9998 2.36622 17.469 3.44952 18.5523C4.53282 19.6356 6.00208 20.2442 7.5341 20.2442H14.467C15.9991 20.2442 17.4683 19.6356 18.5516 18.5523C19.6349 17.469 20.2435 15.9998 20.2435 14.4677V7.53245C20.2435 6.00044 19.6349 4.53117 18.5516 3.44787C17.4683 2.36457 15.9991 1.75598 14.467 1.75598H7.5341ZM7.5341 3.48892H14.467C15.5396 3.48955 16.568 3.91588 17.3264 4.67428C18.0848 5.43267 18.5111 6.4611 18.5117 7.53363V14.4689C18.5117 16.6995 16.6976 18.5136 14.4682 18.5136H7.5341C6.46198 18.5127 5.43403 18.0864 4.67593 17.3283C3.91782 16.5702 3.49151 15.5422 3.49057 14.4701V7.53245C3.49151 6.46012 3.91798 5.432 4.67634 4.67386C5.4347 3.91572 6.46177 3.48955 7.5341 3.48892ZM15.9694 5.41716C15.6294 5.41716 15.3541 5.69245 15.3541 6.03245C15.3541 6.37245 15.6294 6.64775 15.9694 6.64775C16.3094 6.64775 16.5847 6.37245 16.5847 6.03245C16.5847 5.69245 16.3094 5.41716 15.9694 5.41716ZM11.0012 6.37951C9.77553 6.37951 8.60006 6.86615 7.73308 7.73246C6.8661 8.59878 6.37857 9.77389 6.37763 10.9995C6.37825 12.2253 6.86565 13.4007 7.73266 14.2673C8.59967 15.1339 9.77533 15.6207 11.0012 15.6207C12.2266 15.6201 13.4016 15.133 14.2681 14.2665C15.1346 13.4 15.6217 12.2249 15.6223 10.9995C15.6217 9.77409 15.1346 8.59904 14.2681 7.73253C13.4016 6.86603 12.2266 6.38013 11.0012 6.37951ZM11.0012 8.11245C11.7665 8.11401 12.5 8.41864 13.0413 8.9597C13.5826 9.50076 13.8875 10.2342 13.8894 10.9995C13.8878 11.765 13.583 12.4988 13.0417 13.0401C12.5004 13.5814 11.7667 13.8862 11.0012 13.8877C10.2352 13.8868 9.50089 13.5823 8.95907 13.0409C8.41724 12.4995 8.11213 11.7654 8.11057 10.9995C8.11213 10.2336 8.41724 9.49949 8.95907 8.95811C9.50089 8.41673 10.2352 8.11338 11.0012 8.11245Z" fill="#FE6809"/>
+								</svg>
+						</a>
+						<a href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+								<path d="M17.5894 4.32479C16.7266 3.45361 15.6989 2.76296 14.5663 2.29314C13.4338 1.82331 12.219 1.58371 10.9929 1.58832C5.85525 1.58832 1.6682 5.7742 1.66349 10.913C1.66349 12.5589 2.09408 14.1601 2.90702 15.5777L1.5882 20.4119L6.53408 19.1154C7.90171 19.8615 9.43497 20.2519 10.9929 20.2507H10.9976C16.1364 20.2507 20.3223 16.0648 20.327 10.9213C20.3281 9.69545 20.0866 8.48154 19.6166 7.34943C19.1465 6.21732 18.4583 5.18938 17.5894 4.32479ZM10.9929 18.6719C9.6037 18.6708 8.24022 18.297 7.04467 17.5895L6.76231 17.4201L3.8282 18.1895L4.61172 15.3271L4.4282 15.0319C3.6515 13.7969 3.24072 12.3672 3.24349 10.9083C3.24349 6.64244 6.72231 3.16244 10.9976 3.16244C12.0161 3.16061 13.0249 3.36041 13.9659 3.75031C14.9068 4.14021 15.7613 4.71251 16.48 5.4342C17.201 6.1532 17.7727 7.00779 18.162 7.94871C18.5512 8.88963 18.7505 9.89829 18.7482 10.9166C18.7435 15.1977 15.2647 18.6719 10.9929 18.6719ZM15.2458 12.8671C15.0141 12.7507 13.8694 12.1871 13.6541 12.1071C13.44 12.0307 13.2835 11.9907 13.1305 12.2236C12.9741 12.4554 12.527 12.9836 12.3929 13.1354C12.2588 13.2919 12.12 13.3095 11.887 13.1942C11.6553 13.0766 10.9035 12.8319 10.0141 12.0354C9.31996 11.4177 8.85525 10.653 8.71643 10.4213C8.58231 10.1883 8.70349 10.0636 8.81996 9.94715C8.92231 9.84362 9.05172 9.6742 9.1682 9.54009C9.28584 9.40597 9.32467 9.30715 9.40114 9.15185C9.47761 8.9942 9.44114 8.86009 9.38349 8.74362C9.32467 8.62715 8.85996 7.47773 8.66349 7.0142C8.47525 6.55656 8.28349 6.62009 8.13996 6.6142C8.00584 6.60597 7.84937 6.60597 7.6929 6.60597C7.57475 6.60898 7.4585 6.63634 7.35141 6.68634C7.24432 6.73634 7.14871 6.80791 7.07055 6.89656C6.85643 7.1295 6.25761 7.69303 6.25761 8.84244C6.25761 9.99185 7.0929 11.0966 7.21055 11.253C7.32584 11.4095 8.85055 13.7613 11.1905 14.773C11.7435 15.0142 12.1788 15.1566 12.5188 15.2648C13.0776 15.4436 13.5823 15.4166 13.9847 15.3589C14.4317 15.2907 15.3623 14.7942 15.5588 14.2495C15.7517 13.7036 15.7517 13.2377 15.6929 13.1401C15.6353 13.0413 15.4788 12.9836 15.2458 12.8671Z" fill="#FE6809"/>
+								</svg>
+						</a>
+						<a href="#">
+							<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.6956 12.1407H15.4325L15.8622 9.22182H12.6951V7.62652C12.6951 6.41398 13.0725 5.33876 14.1529 5.33876H15.889V2.79153C15.5839 2.74829 14.9388 2.65363 13.7198 2.65363C11.1744 2.65363 9.6821 4.06485 9.6821 7.28V9.22182H7.06543V12.1407H9.6821V20.1634C10.2003 20.2452 10.7252 20.3007 11.264 20.3007C11.7511 20.3007 12.2264 20.2539 12.6956 20.1873V12.1407Z" fill="#FE6809"/>
+								</svg>
+								
+						</a>
+						</div>
+						<div class="header__contact contact">
+							<div class="header__contact__item contact__item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
+									<path d="M0.123867 14.2416L6.95492 8.99989L0.123867 3.75821C0.0819893 3.72594 0.0406936 3.69292 0 3.65917L0 14.3406C0.0406829 14.3068 0.0819787 14.2738 0.123867 14.2416ZM26.8774 15.5432L19.6975 10.0339L14 14.4057L8.30248 10.0339L1.12262 15.5431C0.530632 15.9974 0.140711 16.6728 0.0319921 17.4038H27.9679C27.8592 16.6728 27.4693 15.9974 26.8774 15.5432ZM27.876 3.75821L21.045 8.99989L27.8761 14.2416C27.9181 14.2738 27.9593 14.307 28 14.3407V3.65912C27.9593 3.69287 27.9179 3.72591 27.876 3.75821Z" fill="#FE690A"/>
+									<path d="M1.12256 2.45676L14 12.338L26.8773 2.45676C27.4693 2.00253 27.8592 1.32714 27.9679 0.59613H0.0319824C0.140756 1.32714 0.530622 2.00253 1.12256 2.45676Z" fill="#FE690A"/>
+									</svg>
+									<div class="header__contact__item__wrap contact__item__wrap">
+										<span>email</span>
+										<a href="mailto:info@ipremiertech">info@ipremiertech</a>
+									</div>
+							</div>
+							<hr>
+							<div class="header__contact__item contact__item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M23.562 21.092C23.4003 21.2994 23.2282 21.4986 23.0464 21.6887C22.5742 22.2208 22.0566 22.7109 21.4995 23.1535C20.4407 23.7095 19.2625 24 18.0664 24C16.8704 24 15.6922 23.7095 14.6334 23.1535C11.5961 21.7881 8.83624 19.8755 6.49169 17.5115C4.12068 15.1729 2.20639 12.4133 0.846826 9.37386C0.290683 8.32037 0 7.1472 0 5.95606C0 4.76492 0.290683 3.59175 0.846826 2.53826C1.28061 1.96546 1.77165 1.43832 2.31233 0.964987C2.5023 0.802235 2.71939 0.585246 2.90937 0.449619C3.04379 0.307608 3.20579 0.194482 3.38544 0.117175C3.56509 0.0398683 3.75862 0 3.95422 0C4.14981 0 4.34336 0.0398683 4.52301 0.117175C4.70266 0.194482 4.86465 0.307608 4.99907 0.449619L8.85278 4.30141C8.99918 4.43606 9.11604 4.59959 9.19597 4.78168C9.27591 4.96377 9.31716 5.16045 9.31716 5.3593C9.31716 5.55814 9.27591 5.75483 9.19597 5.93692C9.11604 6.11901 8.99918 6.28254 8.85278 6.41719L7.82151 7.47507C7.472 7.82404 7.2438 8.27595 7.17052 8.76427C7.09723 9.25258 7.18273 9.7515 7.41443 10.1876C8.87011 12.8906 11.0877 15.1071 13.7921 16.5621C14.2267 16.7928 14.7232 16.8804 15.2106 16.8122C15.6981 16.744 16.1514 16.5235 16.5059 16.1823L17.5644 15.0973C17.7012 14.9545 17.8654 14.8409 18.0473 14.7633C18.2292 14.6857 18.425 14.6457 18.6228 14.6457C18.8206 14.6457 19.0163 14.6857 19.1982 14.7633C19.3801 14.8409 19.5444 14.9545 19.6812 15.0973L23.5078 18.9762C23.6577 19.1071 23.7788 19.2676 23.8634 19.4476C23.9481 19.6277 23.9944 19.8233 23.9995 20.0222C24.0046 20.2211 23.9684 20.4188 23.8931 20.603C23.8178 20.7871 23.705 20.9536 23.562 21.092Z" fill="#FE6809"/>
+									</svg>
+									<div class="header__contact__item__wrap contact__item__wrap">
+										<span>Broward</span>
+										<a href="tel:+1 (754)224-1414">+1 (754)224-1414 </a>
+									</div>
+							</div>
+							<hr>
+							<div class="header__contact__item contact__item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M23.562 21.092C23.4003 21.2994 23.2282 21.4986 23.0464 21.6887C22.5742 22.2208 22.0566 22.7109 21.4995 23.1535C20.4407 23.7095 19.2625 24 18.0664 24C16.8704 24 15.6922 23.7095 14.6334 23.1535C11.5961 21.7881 8.83624 19.8755 6.49169 17.5115C4.12068 15.1729 2.20639 12.4133 0.846826 9.37386C0.290683 8.32037 0 7.1472 0 5.95606C0 4.76492 0.290683 3.59175 0.846826 2.53826C1.28061 1.96546 1.77165 1.43832 2.31233 0.964987C2.5023 0.802235 2.71939 0.585246 2.90937 0.449619C3.04379 0.307608 3.20579 0.194482 3.38544 0.117175C3.56509 0.0398683 3.75862 0 3.95422 0C4.14981 0 4.34336 0.0398683 4.52301 0.117175C4.70266 0.194482 4.86465 0.307608 4.99907 0.449619L8.85278 4.30141C8.99918 4.43606 9.11604 4.59959 9.19597 4.78168C9.27591 4.96377 9.31716 5.16045 9.31716 5.3593C9.31716 5.55814 9.27591 5.75483 9.19597 5.93692C9.11604 6.11901 8.99918 6.28254 8.85278 6.41719L7.82151 7.47507C7.472 7.82404 7.2438 8.27595 7.17052 8.76427C7.09723 9.25258 7.18273 9.7515 7.41443 10.1876C8.87011 12.8906 11.0877 15.1071 13.7921 16.5621C14.2267 16.7928 14.7232 16.8804 15.2106 16.8122C15.6981 16.744 16.1514 16.5235 16.5059 16.1823L17.5644 15.0973C17.7012 14.9545 17.8654 14.8409 18.0473 14.7633C18.2292 14.6857 18.425 14.6457 18.6228 14.6457C18.8206 14.6457 19.0163 14.6857 19.1982 14.7633C19.3801 14.8409 19.5444 14.9545 19.6812 15.0973L23.5078 18.9762C23.6577 19.1071 23.7788 19.2676 23.8634 19.4476C23.9481 19.6277 23.9944 19.8233 23.9995 20.0222C24.0046 20.2211 23.9684 20.4188 23.8931 20.603C23.8178 20.7871 23.705 20.9536 23.562 21.092Z" fill="#FE6809"/>
+									</svg>
+									<div class="header__contact__item__wrap contact__item__wrap">
+										<span>West Palm Beach</span>
+										<a href="tel:+1 (561)884-2020">+1 (561)884-2020</a>
+									</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				</div>
+		<div class="header__bottom">
+			<div class="container"> 
+				<div class="header__wrap">
+					<a href="./index.html" class="logo">
+						<img src="./assets/images/logo.svg" alt="iPremier">
+					</a>
+					<div class="header__menu">
+						<nav>
+							<ul>
+								<li><a href="#about">About us</a></li>
+								<li><a href="#services">Our services</a></li>
+								<li><a href="#gallery">Gallery</a></li>
+								<li><a href="#faq">FAQ</a></li>
+							</ul>
+						</nav>
+						<button data-open="open" class="btn">Free Estimate<span></span></button>
+						<div class="header__linkpoint">
+							<div class="header__social socials">
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+									<path d="M7.5341 1.75598C6.00208 1.75598 4.53282 2.36457 3.44952 3.44787C2.36622 4.53117 1.75763 6.00044 1.75763 7.53245V14.4677C1.75763 15.9998 2.36622 17.469 3.44952 18.5523C4.53282 19.6356 6.00208 20.2442 7.5341 20.2442H14.467C15.9991 20.2442 17.4683 19.6356 18.5516 18.5523C19.6349 17.469 20.2435 15.9998 20.2435 14.4677V7.53245C20.2435 6.00044 19.6349 4.53117 18.5516 3.44787C17.4683 2.36457 15.9991 1.75598 14.467 1.75598H7.5341ZM7.5341 3.48892H14.467C15.5396 3.48955 16.568 3.91588 17.3264 4.67428C18.0848 5.43267 18.5111 6.4611 18.5117 7.53363V14.4689C18.5117 16.6995 16.6976 18.5136 14.4682 18.5136H7.5341C6.46198 18.5127 5.43403 18.0864 4.67593 17.3283C3.91782 16.5702 3.49151 15.5422 3.49057 14.4701V7.53245C3.49151 6.46012 3.91798 5.432 4.67634 4.67386C5.4347 3.91572 6.46177 3.48955 7.5341 3.48892ZM15.9694 5.41716C15.6294 5.41716 15.3541 5.69245 15.3541 6.03245C15.3541 6.37245 15.6294 6.64775 15.9694 6.64775C16.3094 6.64775 16.5847 6.37245 16.5847 6.03245C16.5847 5.69245 16.3094 5.41716 15.9694 5.41716ZM11.0012 6.37951C9.77553 6.37951 8.60006 6.86615 7.73308 7.73246C6.8661 8.59878 6.37857 9.77389 6.37763 10.9995C6.37825 12.2253 6.86565 13.4007 7.73266 14.2673C8.59967 15.1339 9.77533 15.6207 11.0012 15.6207C12.2266 15.6201 13.4016 15.133 14.2681 14.2665C15.1346 13.4 15.6217 12.2249 15.6223 10.9995C15.6217 9.77409 15.1346 8.59904 14.2681 7.73253C13.4016 6.86603 12.2266 6.38013 11.0012 6.37951ZM11.0012 8.11245C11.7665 8.11401 12.5 8.41864 13.0413 8.9597C13.5826 9.50076 13.8875 10.2342 13.8894 10.9995C13.8878 11.765 13.583 12.4988 13.0417 13.0401C12.5004 13.5814 11.7667 13.8862 11.0012 13.8877C10.2352 13.8868 9.50089 13.5823 8.95907 13.0409C8.41724 12.4995 8.11213 11.7654 8.11057 10.9995C8.11213 10.2336 8.41724 9.49949 8.95907 8.95811C9.50089 8.41673 10.2352 8.11338 11.0012 8.11245Z" fill="#FE6809"/>
+									</svg>
+							</a>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+									<path d="M17.5894 4.32479C16.7266 3.45361 15.6989 2.76296 14.5663 2.29314C13.4338 1.82331 12.219 1.58371 10.9929 1.58832C5.85525 1.58832 1.6682 5.7742 1.66349 10.913C1.66349 12.5589 2.09408 14.1601 2.90702 15.5777L1.5882 20.4119L6.53408 19.1154C7.90171 19.8615 9.43497 20.2519 10.9929 20.2507H10.9976C16.1364 20.2507 20.3223 16.0648 20.327 10.9213C20.3281 9.69545 20.0866 8.48154 19.6166 7.34943C19.1465 6.21732 18.4583 5.18938 17.5894 4.32479ZM10.9929 18.6719C9.6037 18.6708 8.24022 18.297 7.04467 17.5895L6.76231 17.4201L3.8282 18.1895L4.61172 15.3271L4.4282 15.0319C3.6515 13.7969 3.24072 12.3672 3.24349 10.9083C3.24349 6.64244 6.72231 3.16244 10.9976 3.16244C12.0161 3.16061 13.0249 3.36041 13.9659 3.75031C14.9068 4.14021 15.7613 4.71251 16.48 5.4342C17.201 6.1532 17.7727 7.00779 18.162 7.94871C18.5512 8.88963 18.7505 9.89829 18.7482 10.9166C18.7435 15.1977 15.2647 18.6719 10.9929 18.6719ZM15.2458 12.8671C15.0141 12.7507 13.8694 12.1871 13.6541 12.1071C13.44 12.0307 13.2835 11.9907 13.1305 12.2236C12.9741 12.4554 12.527 12.9836 12.3929 13.1354C12.2588 13.2919 12.12 13.3095 11.887 13.1942C11.6553 13.0766 10.9035 12.8319 10.0141 12.0354C9.31996 11.4177 8.85525 10.653 8.71643 10.4213C8.58231 10.1883 8.70349 10.0636 8.81996 9.94715C8.92231 9.84362 9.05172 9.6742 9.1682 9.54009C9.28584 9.40597 9.32467 9.30715 9.40114 9.15185C9.47761 8.9942 9.44114 8.86009 9.38349 8.74362C9.32467 8.62715 8.85996 7.47773 8.66349 7.0142C8.47525 6.55656 8.28349 6.62009 8.13996 6.6142C8.00584 6.60597 7.84937 6.60597 7.6929 6.60597C7.57475 6.60898 7.4585 6.63634 7.35141 6.68634C7.24432 6.73634 7.14871 6.80791 7.07055 6.89656C6.85643 7.1295 6.25761 7.69303 6.25761 8.84244C6.25761 9.99185 7.0929 11.0966 7.21055 11.253C7.32584 11.4095 8.85055 13.7613 11.1905 14.773C11.7435 15.0142 12.1788 15.1566 12.5188 15.2648C13.0776 15.4436 13.5823 15.4166 13.9847 15.3589C14.4317 15.2907 15.3623 14.7942 15.5588 14.2495C15.7517 13.7036 15.7517 13.2377 15.6929 13.1401C15.6353 13.0413 15.4788 12.9836 15.2458 12.8671Z" fill="#FE6809"/>
+									</svg>
+							</a>
+							<a href="#">
+								<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.6956 12.1407H15.4325L15.8622 9.22182H12.6951V7.62652C12.6951 6.41398 13.0725 5.33876 14.1529 5.33876H15.889V2.79153C15.5839 2.74829 14.9388 2.65363 13.7198 2.65363C11.1744 2.65363 9.6821 4.06485 9.6821 7.28V9.22182H7.06543V12.1407H9.6821V20.1634C10.2003 20.2452 10.7252 20.3007 11.264 20.3007C11.7511 20.3007 12.2264 20.2539 12.6956 20.1873V12.1407Z" fill="#FE6809"/>
+									</svg>
+									
+							</a>
+							</div>
+							<div class="header__contact contact">
+								<div class="header__contact__item contact__item">
+									<svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
+										<path d="M0.123867 14.2416L6.95492 8.99989L0.123867 3.75821C0.0819893 3.72594 0.0406936 3.69292 0 3.65917L0 14.3406C0.0406829 14.3068 0.0819787 14.2738 0.123867 14.2416ZM26.8774 15.5432L19.6975 10.0339L14 14.4057L8.30248 10.0339L1.12262 15.5431C0.530632 15.9974 0.140711 16.6728 0.0319921 17.4038H27.9679C27.8592 16.6728 27.4693 15.9974 26.8774 15.5432ZM27.876 3.75821L21.045 8.99989L27.8761 14.2416C27.9181 14.2738 27.9593 14.307 28 14.3407V3.65912C27.9593 3.69287 27.9179 3.72591 27.876 3.75821Z" fill="#FE690A"/>
+										<path d="M1.12256 2.45676L14 12.338L26.8773 2.45676C27.4693 2.00253 27.8592 1.32714 27.9679 0.59613H0.0319824C0.140756 1.32714 0.530622 2.00253 1.12256 2.45676Z" fill="#FE690A"/>
+										</svg>
+										<div class="header__contact__item__wrap contact__item__wrap">
+											<span>email</span>
+											<a href="mailto:info@ipremiertech">info@ipremiertech</a>
+										</div>
+								</div>
+								<hr>
+								<div class="header__contact__item contact__item">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M23.562 21.092C23.4003 21.2994 23.2282 21.4986 23.0464 21.6887C22.5742 22.2208 22.0566 22.7109 21.4995 23.1535C20.4407 23.7095 19.2625 24 18.0664 24C16.8704 24 15.6922 23.7095 14.6334 23.1535C11.5961 21.7881 8.83624 19.8755 6.49169 17.5115C4.12068 15.1729 2.20639 12.4133 0.846826 9.37386C0.290683 8.32037 0 7.1472 0 5.95606C0 4.76492 0.290683 3.59175 0.846826 2.53826C1.28061 1.96546 1.77165 1.43832 2.31233 0.964987C2.5023 0.802235 2.71939 0.585246 2.90937 0.449619C3.04379 0.307608 3.20579 0.194482 3.38544 0.117175C3.56509 0.0398683 3.75862 0 3.95422 0C4.14981 0 4.34336 0.0398683 4.52301 0.117175C4.70266 0.194482 4.86465 0.307608 4.99907 0.449619L8.85278 4.30141C8.99918 4.43606 9.11604 4.59959 9.19597 4.78168C9.27591 4.96377 9.31716 5.16045 9.31716 5.3593C9.31716 5.55814 9.27591 5.75483 9.19597 5.93692C9.11604 6.11901 8.99918 6.28254 8.85278 6.41719L7.82151 7.47507C7.472 7.82404 7.2438 8.27595 7.17052 8.76427C7.09723 9.25258 7.18273 9.7515 7.41443 10.1876C8.87011 12.8906 11.0877 15.1071 13.7921 16.5621C14.2267 16.7928 14.7232 16.8804 15.2106 16.8122C15.6981 16.744 16.1514 16.5235 16.5059 16.1823L17.5644 15.0973C17.7012 14.9545 17.8654 14.8409 18.0473 14.7633C18.2292 14.6857 18.425 14.6457 18.6228 14.6457C18.8206 14.6457 19.0163 14.6857 19.1982 14.7633C19.3801 14.8409 19.5444 14.9545 19.6812 15.0973L23.5078 18.9762C23.6577 19.1071 23.7788 19.2676 23.8634 19.4476C23.9481 19.6277 23.9944 19.8233 23.9995 20.0222C24.0046 20.2211 23.9684 20.4188 23.8931 20.603C23.8178 20.7871 23.705 20.9536 23.562 21.092Z" fill="#FE6809"/>
+										</svg>
+										<div class="header__contact__item__wrap contact__item__wrap">
+											<span>Broward</span>
+											<a href="tel:+1 (754)224-1414">+1 (754)224-1414 </a>
+										</div>
+								</div>
+								<hr>
+								<div class="header__contact__item contact__item">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M23.562 21.092C23.4003 21.2994 23.2282 21.4986 23.0464 21.6887C22.5742 22.2208 22.0566 22.7109 21.4995 23.1535C20.4407 23.7095 19.2625 24 18.0664 24C16.8704 24 15.6922 23.7095 14.6334 23.1535C11.5961 21.7881 8.83624 19.8755 6.49169 17.5115C4.12068 15.1729 2.20639 12.4133 0.846826 9.37386C0.290683 8.32037 0 7.1472 0 5.95606C0 4.76492 0.290683 3.59175 0.846826 2.53826C1.28061 1.96546 1.77165 1.43832 2.31233 0.964987C2.5023 0.802235 2.71939 0.585246 2.90937 0.449619C3.04379 0.307608 3.20579 0.194482 3.38544 0.117175C3.56509 0.0398683 3.75862 0 3.95422 0C4.14981 0 4.34336 0.0398683 4.52301 0.117175C4.70266 0.194482 4.86465 0.307608 4.99907 0.449619L8.85278 4.30141C8.99918 4.43606 9.11604 4.59959 9.19597 4.78168C9.27591 4.96377 9.31716 5.16045 9.31716 5.3593C9.31716 5.55814 9.27591 5.75483 9.19597 5.93692C9.11604 6.11901 8.99918 6.28254 8.85278 6.41719L7.82151 7.47507C7.472 7.82404 7.2438 8.27595 7.17052 8.76427C7.09723 9.25258 7.18273 9.7515 7.41443 10.1876C8.87011 12.8906 11.0877 15.1071 13.7921 16.5621C14.2267 16.7928 14.7232 16.8804 15.2106 16.8122C15.6981 16.744 16.1514 16.5235 16.5059 16.1823L17.5644 15.0973C17.7012 14.9545 17.8654 14.8409 18.0473 14.7633C18.2292 14.6857 18.425 14.6457 18.6228 14.6457C18.8206 14.6457 19.0163 14.6857 19.1982 14.7633C19.3801 14.8409 19.5444 14.9545 19.6812 15.0973L23.5078 18.9762C23.6577 19.1071 23.7788 19.2676 23.8634 19.4476C23.9481 19.6277 23.9944 19.8233 23.9995 20.0222C24.0046 20.2211 23.9684 20.4188 23.8931 20.603C23.8178 20.7871 23.705 20.9536 23.562 21.092Z" fill="#FE6809"/>
+										</svg>
+										<div class="header__contact__item__wrap contact__item__wrap">
+											<span>West Palm Beach</span>
+											<a href="tel:+1 (561)884-2020">+1 (561)884-2020</a>
+										</div>
+								</div>
+							</div>
+	
+						</div>
+					</div>
+					<div class="burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+			</div>
+	</header>
+	<main>
+		<section class="hero">
+			<div class="container">
+				<div class="hero__container">
+					<div class="hero__content">
+						<h1><strong> iPremier: Professional Handyman Services and </strong> Smart Home Solutions for Modern Living</h1>
+						<p>IPREMIER provides expert handyman services and smart home solutions to enhance your home's comfort, security, and functionality with seamless, high-quality results.</p>
+					<div class="hero__btns">
+						<button data-open="open" class="btn">Free Estimate</button>
+						<a href="#contact" class="btn white-btn">contact us	</a>
+					</div>
+					</div>
+					
+						<img class="hero__img" src="./assets/images/hero.webp" alt="iPremier">
+					
+				</div>
+			</div>
+		</section>
+		<section class="advantages p-m">
+			<div class="container">
+				<div class="advantages__container">
+					<div class="advantages__title center-title">
+						<h2><strong>The iPremier Advantage: </strong>Excellence in every service</h2>
+					</div>
+					<div class="advantages__items">
+						<div class="advantages__item">
+							<img src="./assets/images/advantages-img1.jpg" alt="10+ Years of Experience">
+							<div class="advantages__item__content">
+							<div class="advantages__item__content__title">
+								<span><span class="stat-value" data-target="10">10</span>+</span>
+								Years of Experience
+							</div>
+							<p>With over a decade of expertise, we bring a wealth of knowledge to every project, ensuring exceptional quality and reliability.</p>
+
+							</div>
+						</div>
+						<div class="advantages__item">
+							<img src="./assets/images/advantages-img2.jpg" alt="1000+  Custom Solutions Delivered">
+							<div class="advantages__item__content">
+							<div class="advantages__item__content__title">
+								<span><span class="stat-value" data-target="1000">1000</span>+</span>
+								Custom Solutions Delivered
+							</div>
+							<p>We specialize in providing tailored solutions, leveraging years of expertise to meet the unique needs of every client.</p>
+							</div>
+						</div>
+						<div class="advantages__item">
+							<img src="./assets/images/advantages-img3.jpg" alt="100%  Satisfaction Guarantee">
+							<div class="advantages__item__content">
+							<div class="advantages__item__content__title">
+								<span><span class="stat-value" data-target="100">100</span>%</span>
+							<span>Satisfaction Guarantee</span>
+							</div>
+							<p>We prioritize customer satisfaction, with a proven track record of delivering results that exceed expectations.</p>
+							</div>
+						</div>
+						<div class="advantages__item">
+							<img src="./assets/images/advantages-img3.jpg" alt="24/7">
+							<div class="advantages__item__content">
+							<div class="advantages__item__content__title">
+								<span>24/7</span>
+								Customer Support
+							</div>
+							<p>Our dedicated support team is always available to assist, ensuring your home is always in top condition.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="marquee" >
+			<div class="marquee__wrap">
+			<span><strong>  iPremier&nbsp </strong>  Smart Home</span>
+			<span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+					<path d="M2 13H0V17H2V13ZM28.4142 16.4142C29.1953 15.6332 29.1953 14.3668 28.4142 13.5858L15.6863 0.857864C14.9052 0.0768156 13.6389 0.0768156 12.8579 0.857864C12.0768 1.63891 12.0768 2.90524 12.8579 3.68629L24.1716 15L12.8579 26.3137C12.0768 27.0948 12.0768 28.3611 12.8579 29.1421C13.6389 29.9232 14.9052 29.9232 15.6863 29.1421L28.4142 16.4142ZM2 17H27V13H2V17Z" fill="white"/>
+					</svg>
+			</span>
+			<span><strong>  iPremier&nbsp </strong>Smart Home</span>
+			<span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+					<path d="M2 13H0V17H2V13ZM28.4142 16.4142C29.1953 15.6332 29.1953 14.3668 28.4142 13.5858L15.6863 0.857864C14.9052 0.0768156 13.6389 0.0768156 12.8579 0.857864C12.0768 1.63891 12.0768 2.90524 12.8579 3.68629L24.1716 15L12.8579 26.3137C12.0768 27.0948 12.0768 28.3611 12.8579 29.1421C13.6389 29.9232 14.9052 29.9232 15.6863 29.1421L28.4142 16.4142ZM2 17H27V13H2V17Z" fill="white"/>
+					</svg>
+			</span>
+			
+			</div>
+		</div>
+		<section class="discover p-m">
+			<div class="container">
+				<div class="discover__container">
+					<div class="discover__images">
+						<img src="./assets/images/discover-img1.jpg" alt="Discover iPremier: Enhancing Homes with Expert Handyman Services and Smart Solutions">
+						<img src="./assets/images/discover-img2.jpg" alt="Discover iPremier: Enhancing Homes with Expert Handyman Services and Smart Solutions">
+					</div>
+					<div class="discover__content">
+						<h2><strong>Discover iPremier: Enhancing Homes with Expert Handyman </strong> Services and Smart Solutions</h2>
+						<p>At IPREMIER, we specialize in transforming homes with top-tier handyman services and innovative smart home solutions. Our team is dedicated to enhancing the way you live, combining quality craftsmanship with the latest technology. Whether you're looking to improve your home's functionality, security, or entertainment, we offer personalized solutions to meet your needs.</p>
+						<h3>Our expertise includes:</h3>
+						<ul>
+							<li>Smart Home Automation</li>
+							<li>Home Security & Access Control</li>
+							<li>Custom Home Theaters</li>
+							<li>High-Quality Handyman Services</li>
+						</ul>
+						<p>With years of experience, we ensure every project is completed with precision and care, bringing comfort and efficiency to your space.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="services ">
+			<div class="container">
+				<div class="services__container flex__container p-m">
+					<div class="services__title flex__title">
+						<h2><strong>  our Handyman </strong> Services</h2>
+						<p><strong>IPREMIER:</strong> Smart solutions for modern living—home automation, security, and seamless technology integration.</p>
+						<button data-open="open" class="btn white-btn">Free Estimate</button>
+					</div>
+					<div class="services__items grid__items">
+						<div class="services__item grid__item">
+							<a href="./assets/images/services-img1.jpg" data-lightbox="services-set">
+							<img src="./assets/images/services-img1.jpg" alt="Drywall"></a>
+							<div class="services__item__name grid__item__name">
+								<span class="services__item__name__count grid__item__name__count">01</span>
+								<h3>Drywall</h3>
+							</div>
+						</div>
+						<div class="services__item grid__item">
+							<a href="./assets/images/services-img2.jpg" data-lightbox="services-set">
+							<img src="./assets/images/services-img2.jpg" alt="Painting"></a>
+							<div class="services__item__name grid__item__name">
+								<span class="services__item__name__count grid__item__name__count">02</span>
+								<h3>Painting</h3>
+							</div>
+						</div>
+						<div class="services__item grid__item">
+							<a href="./assets/images/services-img3.jpg" data-lightbox="services-set">
+							<img src="./assets/images/services-img3.jpg" alt="Flooring"></a>
+							<div class="services__item__name grid__item__name">
+								<span class="services__item__name__count grid__item__name__count">03</span>
+								<h3>Flooring</h3>
+							</div>
+						</div>
+						<div class="services__item grid__item">
+							<a href="./assets/images/services-img4.jpg" data-lightbox="services-set">
+							<img src="./assets/images/services-img4.jpg" alt="Electrical"></a>
+							<div class="services__item__name grid__item__name">
+								<span class="services__item__name__count grid__item__name__count">04</span>
+								<h3>Electrical</h3>
+							</div>
+						</div>
+						<div class="services__item grid__item">
+							<a href="./assets/images/services-img5.jpg" data-lightbox="services-set">
+							<img src="./assets/images/services-img5.jpg" alt="Plumbing"></a>
+							<div class="services__item__name grid__item__name">
+								<span class="services__item__name__count grid__item__name__count">05</span>
+								<h3>Plumbing</h3>
+							</div>
+						</div>
+						<div class="services__item grid__item">
+							<a href="./assets/images/services-img6.jpg" data-lightbox="services-set">
+							<img src="./assets/images/services-img6.jpg" alt="Furniture Assembly"></a>
+							<div class="services__item__name grid__item__name">
+								<span class="services__item__name__count grid__item__name__count">06</span>
+								<h3>Furniture Assembly</h3>
+							</div>
+						</div>
+						<div class="services__item grid__item">
+							<a href="./assets/images/services-img7.jpg" data-lightbox="services-set">
+							<img src="./assets/images/services-img7.jpg" alt="Patio Solutions"></a>
+							<div class="services__item__name grid__item__name">
+								<span class="services__item__name__count grid__item__name__count">07</span>
+								<h3>Patio Solutions</h3>
+							</div>
+						</div>
+						<div class="services__item grid__item">
+							<a href="./assets/images/services-img8.jpg" data-lightbox="services-set">
+							<img src="./assets/images/services-img8.jpg" alt="Mosquito Control"></a>
+							<div class="services__item__name grid__item__name">
+								<span class="services__item__name__count grid__item__name__count">08</span>
+								<h3>Mosquito Control</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="solutions">
+			<div class="container">
+				<div class="solutions__container flex__container p-m">
+					<div class="solutions__title flex__title">
+						<h2><strong> our SmartHome  </strong> solutions</h2>
+						<p><strong>IPREMIER:</strong> Smart solutions for today’s lifestyle—integrating home automation, advanced security, and seamless technology for a smarter, safer home.</p>
+						<button data-open="open" class="btn white-btn">Free Estimate</button>
+					</div>
+					<div class="solutions__items grid__items">
+						<div class="solutions__item grid__item">
+							<a href="./assets/images/solutions-img1.jpg" data-lightbox="solutions-set">
+							<img src="./assets/images/solutions-img1.jpg" alt="Home Security"></a>
+							<div class="solutions__item__name grid__item__name">
+								<span class="solutions__item__name__count grid__item__name__count">01</span>
+								<h3>Home Security</h3>
+							</div>
+						</div>
+						<div class="solutions__item grid__item">
+							<a href="./assets/images/solutions-img2.jpg" data-lightbox="solutions-set">
+							<img src="./assets/images/solutions-img2.jpg" alt="Access Control"></a>
+							<div class="solutions__item__name grid__item__name">
+								<span class="solutions__item__name__count grid__item__name__count">02</span>
+								<h3>Access Control</h3>
+							</div>
+						</div>
+						<div class="solutions__item grid__item">
+							<a href="./assets/images/solutions-img3.jpg" data-lightbox="solutions-set">
+							<img src="./assets/images/solutions-img3.jpg" alt="Home Theater & Audio/Video"></a>
+							<div class="solutions__item__name grid__item__name">
+								<span class="solutions__item__name__count grid__item__name__count">03</span>
+								<h3>Home Theater & Audio/Video</h3>
+							</div>
+						</div>
+						<div class="solutions__item grid__item">
+							<a href="./assets/images/solutions-img4.jpg" data-lightbox="solutions-set">
+							<img src="./assets/images/solutions-img4.jpg" alt="Landscape Lighting Control"></a>
+							<div class="solutions__item__name grid__item__name">
+								<span class="solutions__item__name__count grid__item__name__count">04</span>
+								<h3>Landscape Lighting Control</h3>
+							</div>
+						</div>
+						<div class="solutions__item grid__item">
+							<a href="./assets/images/solutions-img5.jpg" data-lightbox="solutions-set">
+							<img src="./assets/images/solutions-img5.jpg" alt="Electricity / Low Voltage"></a>
+							<div class="solutions__item__name grid__item__name">
+								<span class="solutions__item__name__count grid__item__name__count">05</span>
+								<h3>Electricity / Low Voltage</h3>
+							</div>
+						</div>
+						<div class="solutions__item grid__item">
+							<a href="./assets/images/solutions-img6.jpg" data-lightbox="solutions-set">
+							<img src="./assets/images/solutions-img6.jpg" alt="Garage Door Opener WiFi"></a>
+							<div class="solutions__item__name grid__item__name">
+								<span class="solutions__item__name__count grid__item__name__count">06</span>
+								<h3>Garage Door Opener WiFi</h3>
+							</div>
+						</div>
+						<div class="solutions__item grid__item">
+							<a href="./assets/images/solutions-img7.jpg" data-lightbox="solutions-set">
+							<img src="./assets/images/solutions-img7.jpg" alt="Epoxy Flooring"></a>
+							<div class="solutions__item__name grid__item__name">
+								<span class="solutions__item__name__count grid__item__name__count">07</span>
+								<h3>Epoxy Flooring</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="form p-m">
+			<div class="container">
+				<div class="form__container">
+					<div class="form__img">
+						<img src="./assets/images/form-img.jpg" alt="We will answer all your questions and help you in all cases">
+					</div>
+					<div class="form__wrapper">
+						<div> Any questions?</div>
+						<p>We will answer all your questions and help you in all cases</p>
+						<form action="#" type="post">
+							<input type="text" name="name" placeholder="Name">
+							<input type="tel" name="phone" placeholder="Phone">
+							<fieldset>
+								<legend>How do I contact you?</legend>
+								<label>
+										<input type="radio" name="contact" value="whatsApp">
+										WhatsApp
+								</label>						
+								<label>
+										<input type="radio" name="contact" value="phone">
+										Phone
+								</label>						
+								<label>
+										<input type="radio" name="contact" value="sms">
+										SMS
+								</label>						
+						</fieldset>
+							<button type="submit">submit an application</button>
+							
+					</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="work p-m">
+			<div class="container">
+				<div class="work__container">
+					<div class="work__title center-title">
+						<h2><strong>EXAMPLES </strong> OF OUR WORK</h2>
+					</div>
+					<div class="work__gallery">
+						<a href="./assets/images/work.jpg" class="work__gallery__item"  data-lightbox="works-set" >
+							<span class="simple">Handyman</span>
+							<img src="./assets/images/work.jpg" alt="Handyman">
+						</a>
+						<a href="./assets/images/work-img2.jpg" class="work__gallery__item"  data-lightbox="works-set" >
+							<span class="simple">Handyman</span>
+							<img src="./assets/images/work-img2.jpg" alt="Handyman">
+						</a>
+						<a href="./assets/images/work-img3.jpg" class="work__gallery__item"  data-lightbox="works-set" >
+							<span class="simple">Handyman</span>
+							<img src="./assets/images/work-img3.jpg" alt="Handyman">
+						</a>
+						<a href="./assets/images/work-img4.jpg" class="work__gallery__item"  data-lightbox="works-set" >
+							<span class="simple">Handyman</span>
+							<img src="./assets/images/work-img4.jpg" alt="Handyman">
+						</a>
+						<a href="./assets/images/work-img5.jpg" class="work__gallery__item"  data-lightbox="works-set" >
+							<span class="simple">Handyman</span>
+							<img src="./assets/images/work-img5.jpg" alt="Handyman">
+						</a>
+						<a href="./assets/images/work-img6.jpg" class="work__gallery__item"  data-lightbox="works-set" >
+							<span class="simple">Handyman</span>
+							<img src="./assets/images/work-img6.jpg" alt="Handyman">
+						</a>
+						<a href="./assets/images/work-img7.jpg" class="work__gallery__item"  data-lightbox="works-set" >
+							<span class="simple">Handyman</span>
+							<img src="./assets/images/work-img7.jpg" alt="Handyman">
+						</a>
+						<a href="./assets/images/work-img8.jpg" class="work__gallery__item"  data-lightbox="works-set" >
+							<span class="simple">Handyman</span>
+							<img src="./assets/images/work-img8.jpg" alt="Handyman">
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="marquee" >
+			<div class="marquee__wrap">
+			<span><strong>  iPremier&nbsp </strong>  Smart Home</span>
+			<span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+					<path d="M2 13H0V17H2V13ZM28.4142 16.4142C29.1953 15.6332 29.1953 14.3668 28.4142 13.5858L15.6863 0.857864C14.9052 0.0768156 13.6389 0.0768156 12.8579 0.857864C12.0768 1.63891 12.0768 2.90524 12.8579 3.68629L24.1716 15L12.8579 26.3137C12.0768 27.0948 12.0768 28.3611 12.8579 29.1421C13.6389 29.9232 14.9052 29.9232 15.6863 29.1421L28.4142 16.4142ZM2 17H27V13H2V17Z" fill="white"/>
+					</svg>
+			</span>
+			<span><strong>  iPremier&nbsp </strong>Smart Home</span>
+			<span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+					<path d="M2 13H0V17H2V13ZM28.4142 16.4142C29.1953 15.6332 29.1953 14.3668 28.4142 13.5858L15.6863 0.857864C14.9052 0.0768156 13.6389 0.0768156 12.8579 0.857864C12.0768 1.63891 12.0768 2.90524 12.8579 3.68629L24.1716 15L12.8579 26.3137C12.0768 27.0948 12.0768 28.3611 12.8579 29.1421C13.6389 29.9232 14.9052 29.9232 15.6863 29.1421L28.4142 16.4142ZM2 17H27V13H2V17Z" fill="white"/>
+					</svg>
+			</span>
+			
+			</div>
+		</div>
+		<section class="connect">
+			<div class="connect__frame">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.6612189341886!2d-80.31305449999999!3d25.7817513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b9a4624d7415%3A0xc1d86b5ec2b0c54b!2zMTE1MCBOVyA3Mm5kIEF2ZSBUb3dlciAxLCBNaWFtaSwgRkwgMzMxMjYsINCh0L_QvtC70YPRh9C10L3RliDQqNGC0LDRgtC4INCQ0LzQtdGA0LjQutC4!5e0!3m2!1suk!2sua!4v1737553039576!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			<div class="container">
+				<div class="connect__container">
+					<h2><strong>OUR</strong>CONTACTS</h2>
+					<div class="connect__contact contact">
+						<div class="connect__contact__item contact__item">
+							<svg xmlns="http://www.w3.org/2000/svg" width="22" height="33" viewBox="0 0 22 33" fill="none">
+								<path d="M10.9995 0.5C4.93432 0.5 0 5.48215 0 11.6054C0 17.4996 9.98005 31.2705 10.405 31.8536L10.8016 32.3985C10.8244 32.4299 10.8541 32.4555 10.8885 32.4731C10.9229 32.4908 10.9609 32.5 10.9995 32.5C11.0383 32.5001 11.0765 32.4909 11.1111 32.4733C11.1457 32.4556 11.1757 32.43 11.1987 32.3985L11.595 31.8536C12.0202 31.2705 22 17.4996 22 11.6054C22 5.48215 17.0649 0.5 10.9995 0.5ZM10.9995 7.62748C13.1727 7.62748 14.9398 9.41158 14.9398 11.6054C14.9398 13.7981 13.1726 15.5834 10.9995 15.5834C8.82762 15.5834 7.0592 13.7981 7.0592 11.6054C7.0592 9.41158 8.82754 7.62748 10.9995 7.62748Z" fill="#FE6809"/>
+								</svg>
+								<div class="connect__contact__item__wrap contact__item__wrap">
+									<span>Address</span>
+									<a href="https://maps.app.goo.gl/cfNp9gVXQXcwsAqQ7">1150 Nw 72nd Ave Tower 1 Miami, 33126 Florida </a>
+								</div>
+						</div>
+						<div class="connect__contact__item contact__item">
+							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
+								<path d="M0.123867 14.2416L6.95492 8.99989L0.123867 3.75821C0.0819893 3.72594 0.0406936 3.69292 0 3.65917L0 14.3406C0.0406829 14.3068 0.0819787 14.2738 0.123867 14.2416ZM26.8774 15.5432L19.6975 10.0339L14 14.4057L8.30248 10.0339L1.12262 15.5431C0.530632 15.9974 0.140711 16.6728 0.0319921 17.4038H27.9679C27.8592 16.6728 27.4693 15.9974 26.8774 15.5432ZM27.876 3.75821L21.045 8.99989L27.8761 14.2416C27.9181 14.2738 27.9593 14.307 28 14.3407V3.65912C27.9593 3.69287 27.9179 3.72591 27.876 3.75821Z" fill="#FE690A"/>
+								<path d="M1.12256 2.45676L14 12.338L26.8773 2.45676C27.4693 2.00253 27.8592 1.32714 27.9679 0.59613H0.0319824C0.140756 1.32714 0.530622 2.00253 1.12256 2.45676Z" fill="#FE690A"/>
+								</svg>
+								<div class="connect__contact__item__wrap contact__item__wrap">
+									<span>email</span>
+									<a href="mailto:info@ipremiertech">info@ipremiertech</a>
+								</div>
+						</div>
+						
+						<div class="connect__contact__item contact__item">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M23.562 21.092C23.4003 21.2994 23.2282 21.4986 23.0464 21.6887C22.5742 22.2208 22.0566 22.7109 21.4995 23.1535C20.4407 23.7095 19.2625 24 18.0664 24C16.8704 24 15.6922 23.7095 14.6334 23.1535C11.5961 21.7881 8.83624 19.8755 6.49169 17.5115C4.12068 15.1729 2.20639 12.4133 0.846826 9.37386C0.290683 8.32037 0 7.1472 0 5.95606C0 4.76492 0.290683 3.59175 0.846826 2.53826C1.28061 1.96546 1.77165 1.43832 2.31233 0.964987C2.5023 0.802235 2.71939 0.585246 2.90937 0.449619C3.04379 0.307608 3.20579 0.194482 3.38544 0.117175C3.56509 0.0398683 3.75862 0 3.95422 0C4.14981 0 4.34336 0.0398683 4.52301 0.117175C4.70266 0.194482 4.86465 0.307608 4.99907 0.449619L8.85278 4.30141C8.99918 4.43606 9.11604 4.59959 9.19597 4.78168C9.27591 4.96377 9.31716 5.16045 9.31716 5.3593C9.31716 5.55814 9.27591 5.75483 9.19597 5.93692C9.11604 6.11901 8.99918 6.28254 8.85278 6.41719L7.82151 7.47507C7.472 7.82404 7.2438 8.27595 7.17052 8.76427C7.09723 9.25258 7.18273 9.7515 7.41443 10.1876C8.87011 12.8906 11.0877 15.1071 13.7921 16.5621C14.2267 16.7928 14.7232 16.8804 15.2106 16.8122C15.6981 16.744 16.1514 16.5235 16.5059 16.1823L17.5644 15.0973C17.7012 14.9545 17.8654 14.8409 18.0473 14.7633C18.2292 14.6857 18.425 14.6457 18.6228 14.6457C18.8206 14.6457 19.0163 14.6857 19.1982 14.7633C19.3801 14.8409 19.5444 14.9545 19.6812 15.0973L23.5078 18.9762C23.6577 19.1071 23.7788 19.2676 23.8634 19.4476C23.9481 19.6277 23.9944 19.8233 23.9995 20.0222C24.0046 20.2211 23.9684 20.4188 23.8931 20.603C23.8178 20.7871 23.705 20.9536 23.562 21.092Z" fill="#FE6809"/>
+								</svg>
+								<div class="connect__contact__item__wrap contact__item__wrap">
+									<span>Broward</span>
+									<a href="tel:+1 (754)224-1414">+1 (754)224-1414 </a>
+								</div>
+						</div>
+						
+						<div class="connect__contact__item contact__item">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M23.562 21.092C23.4003 21.2994 23.2282 21.4986 23.0464 21.6887C22.5742 22.2208 22.0566 22.7109 21.4995 23.1535C20.4407 23.7095 19.2625 24 18.0664 24C16.8704 24 15.6922 23.7095 14.6334 23.1535C11.5961 21.7881 8.83624 19.8755 6.49169 17.5115C4.12068 15.1729 2.20639 12.4133 0.846826 9.37386C0.290683 8.32037 0 7.1472 0 5.95606C0 4.76492 0.290683 3.59175 0.846826 2.53826C1.28061 1.96546 1.77165 1.43832 2.31233 0.964987C2.5023 0.802235 2.71939 0.585246 2.90937 0.449619C3.04379 0.307608 3.20579 0.194482 3.38544 0.117175C3.56509 0.0398683 3.75862 0 3.95422 0C4.14981 0 4.34336 0.0398683 4.52301 0.117175C4.70266 0.194482 4.86465 0.307608 4.99907 0.449619L8.85278 4.30141C8.99918 4.43606 9.11604 4.59959 9.19597 4.78168C9.27591 4.96377 9.31716 5.16045 9.31716 5.3593C9.31716 5.55814 9.27591 5.75483 9.19597 5.93692C9.11604 6.11901 8.99918 6.28254 8.85278 6.41719L7.82151 7.47507C7.472 7.82404 7.2438 8.27595 7.17052 8.76427C7.09723 9.25258 7.18273 9.7515 7.41443 10.1876C8.87011 12.8906 11.0877 15.1071 13.7921 16.5621C14.2267 16.7928 14.7232 16.8804 15.2106 16.8122C15.6981 16.744 16.1514 16.5235 16.5059 16.1823L17.5644 15.0973C17.7012 14.9545 17.8654 14.8409 18.0473 14.7633C18.2292 14.6857 18.425 14.6457 18.6228 14.6457C18.8206 14.6457 19.0163 14.6857 19.1982 14.7633C19.3801 14.8409 19.5444 14.9545 19.6812 15.0973L23.5078 18.9762C23.6577 19.1071 23.7788 19.2676 23.8634 19.4476C23.9481 19.6277 23.9944 19.8233 23.9995 20.0222C24.0046 20.2211 23.9684 20.4188 23.8931 20.603C23.8178 20.7871 23.705 20.9536 23.562 21.092Z" fill="#FE6809"/>
+								</svg>
+								<div class="connect__contact__item__wrap contact__item__wrap">
+									<span>West Palm Beach</span>
+									<a href="tel:+1 (561)884-2020">+1 (561)884-2020</a>
+								</div>
+						</div>
+					</div>
+					<div class="connect__socials socials">
+						<a href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+								<path d="M7.5341 1.75598C6.00208 1.75598 4.53282 2.36457 3.44952 3.44787C2.36622 4.53117 1.75763 6.00044 1.75763 7.53245V14.4677C1.75763 15.9998 2.36622 17.469 3.44952 18.5523C4.53282 19.6356 6.00208 20.2442 7.5341 20.2442H14.467C15.9991 20.2442 17.4683 19.6356 18.5516 18.5523C19.6349 17.469 20.2435 15.9998 20.2435 14.4677V7.53245C20.2435 6.00044 19.6349 4.53117 18.5516 3.44787C17.4683 2.36457 15.9991 1.75598 14.467 1.75598H7.5341ZM7.5341 3.48892H14.467C15.5396 3.48955 16.568 3.91588 17.3264 4.67428C18.0848 5.43267 18.5111 6.4611 18.5117 7.53363V14.4689C18.5117 16.6995 16.6976 18.5136 14.4682 18.5136H7.5341C6.46198 18.5127 5.43403 18.0864 4.67593 17.3283C3.91782 16.5702 3.49151 15.5422 3.49057 14.4701V7.53245C3.49151 6.46012 3.91798 5.432 4.67634 4.67386C5.4347 3.91572 6.46177 3.48955 7.5341 3.48892ZM15.9694 5.41716C15.6294 5.41716 15.3541 5.69245 15.3541 6.03245C15.3541 6.37245 15.6294 6.64775 15.9694 6.64775C16.3094 6.64775 16.5847 6.37245 16.5847 6.03245C16.5847 5.69245 16.3094 5.41716 15.9694 5.41716ZM11.0012 6.37951C9.77553 6.37951 8.60006 6.86615 7.73308 7.73246C6.8661 8.59878 6.37857 9.77389 6.37763 10.9995C6.37825 12.2253 6.86565 13.4007 7.73266 14.2673C8.59967 15.1339 9.77533 15.6207 11.0012 15.6207C12.2266 15.6201 13.4016 15.133 14.2681 14.2665C15.1346 13.4 15.6217 12.2249 15.6223 10.9995C15.6217 9.77409 15.1346 8.59904 14.2681 7.73253C13.4016 6.86603 12.2266 6.38013 11.0012 6.37951ZM11.0012 8.11245C11.7665 8.11401 12.5 8.41864 13.0413 8.9597C13.5826 9.50076 13.8875 10.2342 13.8894 10.9995C13.8878 11.765 13.583 12.4988 13.0417 13.0401C12.5004 13.5814 11.7667 13.8862 11.0012 13.8877C10.2352 13.8868 9.50089 13.5823 8.95907 13.0409C8.41724 12.4995 8.11213 11.7654 8.11057 10.9995C8.11213 10.2336 8.41724 9.49949 8.95907 8.95811C9.50089 8.41673 10.2352 8.11338 11.0012 8.11245Z" fill="#FE6809"/>
+								</svg>
+						</a>
+						<a href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+								<path d="M17.5894 4.32479C16.7266 3.45361 15.6989 2.76296 14.5663 2.29314C13.4338 1.82331 12.219 1.58371 10.9929 1.58832C5.85525 1.58832 1.6682 5.7742 1.66349 10.913C1.66349 12.5589 2.09408 14.1601 2.90702 15.5777L1.5882 20.4119L6.53408 19.1154C7.90171 19.8615 9.43497 20.2519 10.9929 20.2507H10.9976C16.1364 20.2507 20.3223 16.0648 20.327 10.9213C20.3281 9.69545 20.0866 8.48154 19.6166 7.34943C19.1465 6.21732 18.4583 5.18938 17.5894 4.32479ZM10.9929 18.6719C9.6037 18.6708 8.24022 18.297 7.04467 17.5895L6.76231 17.4201L3.8282 18.1895L4.61172 15.3271L4.4282 15.0319C3.6515 13.7969 3.24072 12.3672 3.24349 10.9083C3.24349 6.64244 6.72231 3.16244 10.9976 3.16244C12.0161 3.16061 13.0249 3.36041 13.9659 3.75031C14.9068 4.14021 15.7613 4.71251 16.48 5.4342C17.201 6.1532 17.7727 7.00779 18.162 7.94871C18.5512 8.88963 18.7505 9.89829 18.7482 10.9166C18.7435 15.1977 15.2647 18.6719 10.9929 18.6719ZM15.2458 12.8671C15.0141 12.7507 13.8694 12.1871 13.6541 12.1071C13.44 12.0307 13.2835 11.9907 13.1305 12.2236C12.9741 12.4554 12.527 12.9836 12.3929 13.1354C12.2588 13.2919 12.12 13.3095 11.887 13.1942C11.6553 13.0766 10.9035 12.8319 10.0141 12.0354C9.31996 11.4177 8.85525 10.653 8.71643 10.4213C8.58231 10.1883 8.70349 10.0636 8.81996 9.94715C8.92231 9.84362 9.05172 9.6742 9.1682 9.54009C9.28584 9.40597 9.32467 9.30715 9.40114 9.15185C9.47761 8.9942 9.44114 8.86009 9.38349 8.74362C9.32467 8.62715 8.85996 7.47773 8.66349 7.0142C8.47525 6.55656 8.28349 6.62009 8.13996 6.6142C8.00584 6.60597 7.84937 6.60597 7.6929 6.60597C7.57475 6.60898 7.4585 6.63634 7.35141 6.68634C7.24432 6.73634 7.14871 6.80791 7.07055 6.89656C6.85643 7.1295 6.25761 7.69303 6.25761 8.84244C6.25761 9.99185 7.0929 11.0966 7.21055 11.253C7.32584 11.4095 8.85055 13.7613 11.1905 14.773C11.7435 15.0142 12.1788 15.1566 12.5188 15.2648C13.0776 15.4436 13.5823 15.4166 13.9847 15.3589C14.4317 15.2907 15.3623 14.7942 15.5588 14.2495C15.7517 13.7036 15.7517 13.2377 15.6929 13.1401C15.6353 13.0413 15.4788 12.9836 15.2458 12.8671Z" fill="#FE6809"/>
+								</svg>
+						</a>
+						<a href="#">
+							<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.6956 12.1407H15.4325L15.8622 9.22182H12.6951V7.62652C12.6951 6.41398 13.0725 5.33876 14.1529 5.33876H15.889V2.79153C15.5839 2.74829 14.9388 2.65363 13.7198 2.65363C11.1744 2.65363 9.6821 4.06485 9.6821 7.28V9.22182H7.06543V12.1407H9.6821V20.1634C10.2003 20.2452 10.7252 20.3007 11.264 20.3007C11.7511 20.3007 12.2264 20.2539 12.6956 20.1873V12.1407Z" fill="#FE6809"/>
+								</svg>
+								
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="area">
+			<div class="container">
+				<div class="area__container">
+					<div class="area__img">
+						<img src="./assets/images/area-img.webp" alt="Our Service Area">
+					</div>
+					<div class="area__content">
+						<h2><strong>Our Service Area</strong> : Covering All of South Florida</h2>
+						<p>Serving all of South Florida, from Miami to West Palm Beach and beyond. We’re here to provide top-quality services for both residential and commercial needs in your area</p>
+						<ul>
+							<li>Miami</li>
+							<li>Fort Lauderdale</li>
+							<li>West Palm Beach</li>
+							<li>Boca Raton</li>
+							<li>Sarasota</li>
+							<li>Hollywood</li>
+							<li>Key West</li>
+							<li>Naples</li>
+							<li>Fort Myers</li>
+						</ul>
+						<button class="btn white-btn" data-open="open">	Free Estimate	</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="faq p-m" id="faq">
+			<div class="container">
+				<div class="faq__container">
+					<div class="faq__title center-title">
+					<h2><strong>Frequently Asked </strong> Questions</h2>
+					<p>Here you'll find answers to common questions about our handyman services and smart home solutions. If you need more information, feel free to reach out to our team—we're here to help!</p>
+					</div>
+					<div class="faq__items accord">
+						<div class="faq__item accord-item" >
+						<div class="faq__item__top accord-item-top">
+							<div class="faq__item__top__count">01</div>
+							<span></span>
+							<p>What kind of warranty do you offer on your services?</p>
+							<div class="faq-icon-wrapper">
+								<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+									<g clip-path="url(#clip0_48_2646)">
+									<path d="M0.693359 9.28942L9.2665 1.02246" stroke="#EAEAEA" stroke-width="2"/>
+									<path d="M9.61365 1.1709L0.534058 1.1709" stroke="#EAEAEA" stroke-width="2"/>
+									<path d="M8.98926 9.62651L8.98926 0.546875" stroke="#EAEAEA" stroke-width="2"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_48_2646">
+									<rect width="10" height="10" fill="white"/>
+									</clipPath>
+									</defs>
+									</svg>
+							</div>
+						</div>
+						<div class="faq__item-bottom accord-item-bottom">
+							<div class="faq__item-bottom-wrap">
+							<p>We stand by the quality of our work and provide a 12-month warranty on all completed projects and installed systems. This warranty covers any potential issues arising from our workmanship or materials used. If something goes wrong during this period, we’ll address it promptly and at no additional cost.</p>
+							</div>
+						</div>
+						</div>
+						<div class="faq__item accord-item" >
+						<div class="faq__item__top accord-item-top">
+							<div class="faq__item__top__count">02</div>
+							<span></span>
+							<p>Do you work with both residential and commercial properties?</p>
+							<div class="faq-icon-wrapper">
+								<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+									<g clip-path="url(#clip0_48_2646)">
+									<path d="M0.693359 9.28942L9.2665 1.02246" stroke="#EAEAEA" stroke-width="2"/>
+									<path d="M9.61365 1.1709L0.534058 1.1709" stroke="#EAEAEA" stroke-width="2"/>
+									<path d="M8.98926 9.62651L8.98926 0.546875" stroke="#EAEAEA" stroke-width="2"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_48_2646">
+									<rect width="10" height="10" fill="white"/>
+									</clipPath>
+									</defs>
+									</svg>
+							</div>
+						</div>
+						<div class="faq__item-bottom accord-item-bottom">
+							<div class="faq__item-bottom-wrap">
+							<p>We stand by the quality of our work and provide a 12-month warranty on all completed projects and installed systems. This warranty covers any potential issues arising from our workmanship or materials used. If something goes wrong during this period, we’ll address it promptly and at no additional cost.</p>
+							</div>
+						</div>
+						</div>
+						<div class="faq__item accord-item" >
+						<div class="faq__item__top accord-item-top">
+							<div class="faq__item__top__count">03</div>
+							<span></span>
+							<p>How long does it take to complete a project?</p>
+							<div class="faq-icon-wrapper">
+								<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+									<g clip-path="url(#clip0_48_2646)">
+									<path d="M0.693359 9.28942L9.2665 1.02246" stroke="#EAEAEA" stroke-width="2"/>
+									<path d="M9.61365 1.1709L0.534058 1.1709" stroke="#EAEAEA" stroke-width="2"/>
+									<path d="M8.98926 9.62651L8.98926 0.546875" stroke="#EAEAEA" stroke-width="2"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_48_2646">
+									<rect width="10" height="10" fill="white"/>
+									</clipPath>
+									</defs>
+									</svg>
+							</div>
+						</div>
+						<div class="faq__item-bottom accord-item-bottom">
+							<div class="faq__item-bottom-wrap">
+							<p>We stand by the quality of our work and provide a 12-month warranty on all completed projects and installed systems. This warranty covers any potential issues arising from our workmanship or materials used. If something goes wrong during this period, we’ll address it promptly and at no additional cost.</p>
+							</div>
+						</div>
+						</div>
+						<div class="faq__item accord-item" >
+						<div class="faq__item__top accord-item-top">
+							<div class="faq__item__top__count">04</div>
+							<span></span>
+							<p>Can I request multiple services at once?</p>
+							<div class="faq-icon-wrapper">
+								<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+									<g clip-path="url(#clip0_48_2646)">
+									<path d="M0.693359 9.28942L9.2665 1.02246" stroke="#EAEAEA" stroke-width="2"/>
+									<path d="M9.61365 1.1709L0.534058 1.1709" stroke="#EAEAEA" stroke-width="2"/>
+									<path d="M8.98926 9.62651L8.98926 0.546875" stroke="#EAEAEA" stroke-width="2"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_48_2646">
+									<rect width="10" height="10" fill="white"/>
+									</clipPath>
+									</defs>
+									</svg>
+							</div>
+						</div>
+						<div class="faq__item-bottom accord-item-bottom">
+							<div class="faq__item-bottom-wrap">
+							<p>We stand by the quality of our work and provide a 12-month warranty on all completed projects and installed systems. This warranty covers any potential issues arising from our workmanship or materials used. If something goes wrong during this period, we’ll address it promptly and at no additional cost.</p>
+							</div>
+						</div>
+						</div>
+						<div class="faq__item accord-item" >
+						<div class="faq__item__top accord-item-top">
+							<div class="faq__item__top__count">05</div>
+							<span></span>
+							<p>How is the cost of services determined?</p>
+							<div class="faq-icon-wrapper">
+								<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+									<g clip-path="url(#clip0_48_2646)">
+									<path d="M0.693359 9.28942L9.2665 1.02246" stroke="#EAEAEA" stroke-width="2"/>
+									<path d="M9.61365 1.1709L0.534058 1.1709" stroke="#EAEAEA" stroke-width="2"/>
+									<path d="M8.98926 9.62651L8.98926 0.546875" stroke="#EAEAEA" stroke-width="2"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_48_2646">
+									<rect width="10" height="10" fill="white"/>
+									</clipPath>
+									</defs>
+									</svg>
+							</div>
+						</div>
+						<div class="faq__item-bottom accord-item-bottom">
+							<div class="faq__item-bottom-wrap">
+							<p>We stand by the quality of our work and provide a 12-month warranty on all completed projects and installed systems. This warranty covers any potential issues arising from our workmanship or materials used. If something goes wrong during this period, we’ll address it promptly and at no additional cost.</p>
+							</div>
+						</div>
+						</div>
+						
+				</div>
+				</div>
+			</div>
+		</section>
+		
+		<div class="popup">
+			<div class="popup-bg" data-close="close"></div>
+				<div class="popup-wrapper">
+					<div class="popup-wrap">
+						<button class="close popup-close" data-close="close">
+							<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect opacity="0.5" width="48" height="48" fill="#FFF9EF"/>
+								<path d="M14.8732 14.8732L33.5932 32.4507L14.8732 14.8732ZM33.8027 14.8732L15.0827 32.4507L33.8027 14.8732Z" fill="#8EB0EC"/>
+								<path d="M14.8732 14.8732L33.5932 32.4507M33.8027 14.8732L15.0827 32.4507" stroke="white" stroke-width="2"/>
+								</svg>
+								
+						</button>
+						<div class="popup__form">
+							<div>Get Your Free Estimate Today</div>
+							<p>Fill Out the Form, Provide Your Info, Let Us Know Your Needs, and We’ll Get Back to You Today!</p>
+							<form action="#" type="post">
+								<input type="text" name="name" placeholder="Name">
+								<input type="tel" name="phone" placeholder="Phone number">
+								<input type="text" name="service" placeholder="Services">
+								<fieldset>
+									<legend>How do I contact you?</legend>
+									<label>
+											<input type="radio" name="contact" value="whatsApp">
+											WhatsApp
+									</label>						
+									<label>
+											<input type="radio" name="contact" value="phone">
+											Phone
+									</label>						
+									<label>
+											<input type="radio" name="contact" value="sms">
+											SMS
+									</label>						
+							</fieldset>
+								<button type="submit">submit an application</button>
+								
+						</form>
+						</div>
+					</div>
+				
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container"> 
+		<div class="footer__promo">
+			<div class="div">
+				Do you need advice on our services?
+			</div>
+			<button class="btn" data-open="open">Free Estimate</button>
+		</div>
+		<div class="footer__top">
+			<a href="#" class="logo">
+				<img src="./assets/images/logo-footer.svg" alt="IPREMIER">
+			</a>
+			<div class="footer__wrap">
+				<div class="footer__block">
+					<div class="footer__block__title">Company</div>
+				<nav>
+					<ul>
+						<li><a href="#about">About us</a></li>
+						<li><a href="#services">Our services</a></li>
+						<li><a href="#gallery">Gallery</a></li>
+						<li><a href="#faq">FAQ</a></li>
+					</ul>
+				</nav>
+				</div>
+				<div class="footer__block">
+					<div class="footer__block__title">Contacts</div>
+					
+						<div class="footer__contact">
+							<div class="connect__contact__item contact__item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="33" viewBox="0 0 22 33" fill="none">
+									<path d="M10.9995 0.5C4.93432 0.5 0 5.48215 0 11.6054C0 17.4996 9.98005 31.2705 10.405 31.8536L10.8016 32.3985C10.8244 32.4299 10.8541 32.4555 10.8885 32.4731C10.9229 32.4908 10.9609 32.5 10.9995 32.5C11.0383 32.5001 11.0765 32.4909 11.1111 32.4733C11.1457 32.4556 11.1757 32.43 11.1987 32.3985L11.595 31.8536C12.0202 31.2705 22 17.4996 22 11.6054C22 5.48215 17.0649 0.5 10.9995 0.5ZM10.9995 7.62748C13.1727 7.62748 14.9398 9.41158 14.9398 11.6054C14.9398 13.7981 13.1726 15.5834 10.9995 15.5834C8.82762 15.5834 7.0592 13.7981 7.0592 11.6054C7.0592 9.41158 8.82754 7.62748 10.9995 7.62748Z" fill="#FE6809"/>
+									</svg>
+									<div class="footer__contact__item__wrap contact__item__wrap">
+										<span>Address</span>
+										<a href="https://maps.app.goo.gl/cfNp9gVXQXcwsAqQ7">1150 Nw 72nd Ave Tower 1 Miami, 33126 Florida </a>
+									</div>
+							</div>
+							<div class="footer__contact__item contact__item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
+									<path d="M0.123867 14.2416L6.95492 8.99989L0.123867 3.75821C0.0819893 3.72594 0.0406936 3.69292 0 3.65917L0 14.3406C0.0406829 14.3068 0.0819787 14.2738 0.123867 14.2416ZM26.8774 15.5432L19.6975 10.0339L14 14.4057L8.30248 10.0339L1.12262 15.5431C0.530632 15.9974 0.140711 16.6728 0.0319921 17.4038H27.9679C27.8592 16.6728 27.4693 15.9974 26.8774 15.5432ZM27.876 3.75821L21.045 8.99989L27.8761 14.2416C27.9181 14.2738 27.9593 14.307 28 14.3407V3.65912C27.9593 3.69287 27.9179 3.72591 27.876 3.75821Z" fill="#FE690A"/>
+									<path d="M1.12256 2.45676L14 12.338L26.8773 2.45676C27.4693 2.00253 27.8592 1.32714 27.9679 0.59613H0.0319824C0.140756 1.32714 0.530622 2.00253 1.12256 2.45676Z" fill="#FE690A"/>
+									</svg>
+									<div class="footer__contact__item__wrap contact__item__wrap">
+										<span>email</span>
+										<a href="mailto:info@ipremiertech">info@ipremiertech</a>
+									</div>
+							</div>
+							
+							<div class="footer__contact__item contact__item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M23.562 21.092C23.4003 21.2994 23.2282 21.4986 23.0464 21.6887C22.5742 22.2208 22.0566 22.7109 21.4995 23.1535C20.4407 23.7095 19.2625 24 18.0664 24C16.8704 24 15.6922 23.7095 14.6334 23.1535C11.5961 21.7881 8.83624 19.8755 6.49169 17.5115C4.12068 15.1729 2.20639 12.4133 0.846826 9.37386C0.290683 8.32037 0 7.1472 0 5.95606C0 4.76492 0.290683 3.59175 0.846826 2.53826C1.28061 1.96546 1.77165 1.43832 2.31233 0.964987C2.5023 0.802235 2.71939 0.585246 2.90937 0.449619C3.04379 0.307608 3.20579 0.194482 3.38544 0.117175C3.56509 0.0398683 3.75862 0 3.95422 0C4.14981 0 4.34336 0.0398683 4.52301 0.117175C4.70266 0.194482 4.86465 0.307608 4.99907 0.449619L8.85278 4.30141C8.99918 4.43606 9.11604 4.59959 9.19597 4.78168C9.27591 4.96377 9.31716 5.16045 9.31716 5.3593C9.31716 5.55814 9.27591 5.75483 9.19597 5.93692C9.11604 6.11901 8.99918 6.28254 8.85278 6.41719L7.82151 7.47507C7.472 7.82404 7.2438 8.27595 7.17052 8.76427C7.09723 9.25258 7.18273 9.7515 7.41443 10.1876C8.87011 12.8906 11.0877 15.1071 13.7921 16.5621C14.2267 16.7928 14.7232 16.8804 15.2106 16.8122C15.6981 16.744 16.1514 16.5235 16.5059 16.1823L17.5644 15.0973C17.7012 14.9545 17.8654 14.8409 18.0473 14.7633C18.2292 14.6857 18.425 14.6457 18.6228 14.6457C18.8206 14.6457 19.0163 14.6857 19.1982 14.7633C19.3801 14.8409 19.5444 14.9545 19.6812 15.0973L23.5078 18.9762C23.6577 19.1071 23.7788 19.2676 23.8634 19.4476C23.9481 19.6277 23.9944 19.8233 23.9995 20.0222C24.0046 20.2211 23.9684 20.4188 23.8931 20.603C23.8178 20.7871 23.705 20.9536 23.562 21.092Z" fill="#FE6809"/>
+									</svg>
+									<div class="footer__contact__item__wrap contact__item__wrap">
+										<span>Broward</span>
+										<a href="tel:+1 (754)224-1414">+1 (754)224-1414 </a>
+									</div>
+							</div>
+							
+							<div class="footer__contact__item contact__item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M23.562 21.092C23.4003 21.2994 23.2282 21.4986 23.0464 21.6887C22.5742 22.2208 22.0566 22.7109 21.4995 23.1535C20.4407 23.7095 19.2625 24 18.0664 24C16.8704 24 15.6922 23.7095 14.6334 23.1535C11.5961 21.7881 8.83624 19.8755 6.49169 17.5115C4.12068 15.1729 2.20639 12.4133 0.846826 9.37386C0.290683 8.32037 0 7.1472 0 5.95606C0 4.76492 0.290683 3.59175 0.846826 2.53826C1.28061 1.96546 1.77165 1.43832 2.31233 0.964987C2.5023 0.802235 2.71939 0.585246 2.90937 0.449619C3.04379 0.307608 3.20579 0.194482 3.38544 0.117175C3.56509 0.0398683 3.75862 0 3.95422 0C4.14981 0 4.34336 0.0398683 4.52301 0.117175C4.70266 0.194482 4.86465 0.307608 4.99907 0.449619L8.85278 4.30141C8.99918 4.43606 9.11604 4.59959 9.19597 4.78168C9.27591 4.96377 9.31716 5.16045 9.31716 5.3593C9.31716 5.55814 9.27591 5.75483 9.19597 5.93692C9.11604 6.11901 8.99918 6.28254 8.85278 6.41719L7.82151 7.47507C7.472 7.82404 7.2438 8.27595 7.17052 8.76427C7.09723 9.25258 7.18273 9.7515 7.41443 10.1876C8.87011 12.8906 11.0877 15.1071 13.7921 16.5621C14.2267 16.7928 14.7232 16.8804 15.2106 16.8122C15.6981 16.744 16.1514 16.5235 16.5059 16.1823L17.5644 15.0973C17.7012 14.9545 17.8654 14.8409 18.0473 14.7633C18.2292 14.6857 18.425 14.6457 18.6228 14.6457C18.8206 14.6457 19.0163 14.6857 19.1982 14.7633C19.3801 14.8409 19.5444 14.9545 19.6812 15.0973L23.5078 18.9762C23.6577 19.1071 23.7788 19.2676 23.8634 19.4476C23.9481 19.6277 23.9944 19.8233 23.9995 20.0222C24.0046 20.2211 23.9684 20.4188 23.8931 20.603C23.8178 20.7871 23.705 20.9536 23.562 21.092Z" fill="#FE6809"/>
+									</svg>
+									<div class="footer__contact__item__wrap contact__item__wrap">
+										<span>West Palm Beach</span>
+										<a href="tel:+1 (561)884-2020">+1 (561)884-2020</a>
+									</div>
+							</div>
+						</div>
+					
+				</div>
+				<div class="footer__block ">
+					<div class="footer__block__title">SOCIALS</div>
+					
+						<div class="footer__socials socials">
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+									<path d="M7.5341 1.75598C6.00208 1.75598 4.53282 2.36457 3.44952 3.44787C2.36622 4.53117 1.75763 6.00044 1.75763 7.53245V14.4677C1.75763 15.9998 2.36622 17.469 3.44952 18.5523C4.53282 19.6356 6.00208 20.2442 7.5341 20.2442H14.467C15.9991 20.2442 17.4683 19.6356 18.5516 18.5523C19.6349 17.469 20.2435 15.9998 20.2435 14.4677V7.53245C20.2435 6.00044 19.6349 4.53117 18.5516 3.44787C17.4683 2.36457 15.9991 1.75598 14.467 1.75598H7.5341ZM7.5341 3.48892H14.467C15.5396 3.48955 16.568 3.91588 17.3264 4.67428C18.0848 5.43267 18.5111 6.4611 18.5117 7.53363V14.4689C18.5117 16.6995 16.6976 18.5136 14.4682 18.5136H7.5341C6.46198 18.5127 5.43403 18.0864 4.67593 17.3283C3.91782 16.5702 3.49151 15.5422 3.49057 14.4701V7.53245C3.49151 6.46012 3.91798 5.432 4.67634 4.67386C5.4347 3.91572 6.46177 3.48955 7.5341 3.48892ZM15.9694 5.41716C15.6294 5.41716 15.3541 5.69245 15.3541 6.03245C15.3541 6.37245 15.6294 6.64775 15.9694 6.64775C16.3094 6.64775 16.5847 6.37245 16.5847 6.03245C16.5847 5.69245 16.3094 5.41716 15.9694 5.41716ZM11.0012 6.37951C9.77553 6.37951 8.60006 6.86615 7.73308 7.73246C6.8661 8.59878 6.37857 9.77389 6.37763 10.9995C6.37825 12.2253 6.86565 13.4007 7.73266 14.2673C8.59967 15.1339 9.77533 15.6207 11.0012 15.6207C12.2266 15.6201 13.4016 15.133 14.2681 14.2665C15.1346 13.4 15.6217 12.2249 15.6223 10.9995C15.6217 9.77409 15.1346 8.59904 14.2681 7.73253C13.4016 6.86603 12.2266 6.38013 11.0012 6.37951ZM11.0012 8.11245C11.7665 8.11401 12.5 8.41864 13.0413 8.9597C13.5826 9.50076 13.8875 10.2342 13.8894 10.9995C13.8878 11.765 13.583 12.4988 13.0417 13.0401C12.5004 13.5814 11.7667 13.8862 11.0012 13.8877C10.2352 13.8868 9.50089 13.5823 8.95907 13.0409C8.41724 12.4995 8.11213 11.7654 8.11057 10.9995C8.11213 10.2336 8.41724 9.49949 8.95907 8.95811C9.50089 8.41673 10.2352 8.11338 11.0012 8.11245Z" fill="#FE6809"/>
+									</svg>
+							</a>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+									<path d="M17.5894 4.32479C16.7266 3.45361 15.6989 2.76296 14.5663 2.29314C13.4338 1.82331 12.219 1.58371 10.9929 1.58832C5.85525 1.58832 1.6682 5.7742 1.66349 10.913C1.66349 12.5589 2.09408 14.1601 2.90702 15.5777L1.5882 20.4119L6.53408 19.1154C7.90171 19.8615 9.43497 20.2519 10.9929 20.2507H10.9976C16.1364 20.2507 20.3223 16.0648 20.327 10.9213C20.3281 9.69545 20.0866 8.48154 19.6166 7.34943C19.1465 6.21732 18.4583 5.18938 17.5894 4.32479ZM10.9929 18.6719C9.6037 18.6708 8.24022 18.297 7.04467 17.5895L6.76231 17.4201L3.8282 18.1895L4.61172 15.3271L4.4282 15.0319C3.6515 13.7969 3.24072 12.3672 3.24349 10.9083C3.24349 6.64244 6.72231 3.16244 10.9976 3.16244C12.0161 3.16061 13.0249 3.36041 13.9659 3.75031C14.9068 4.14021 15.7613 4.71251 16.48 5.4342C17.201 6.1532 17.7727 7.00779 18.162 7.94871C18.5512 8.88963 18.7505 9.89829 18.7482 10.9166C18.7435 15.1977 15.2647 18.6719 10.9929 18.6719ZM15.2458 12.8671C15.0141 12.7507 13.8694 12.1871 13.6541 12.1071C13.44 12.0307 13.2835 11.9907 13.1305 12.2236C12.9741 12.4554 12.527 12.9836 12.3929 13.1354C12.2588 13.2919 12.12 13.3095 11.887 13.1942C11.6553 13.0766 10.9035 12.8319 10.0141 12.0354C9.31996 11.4177 8.85525 10.653 8.71643 10.4213C8.58231 10.1883 8.70349 10.0636 8.81996 9.94715C8.92231 9.84362 9.05172 9.6742 9.1682 9.54009C9.28584 9.40597 9.32467 9.30715 9.40114 9.15185C9.47761 8.9942 9.44114 8.86009 9.38349 8.74362C9.32467 8.62715 8.85996 7.47773 8.66349 7.0142C8.47525 6.55656 8.28349 6.62009 8.13996 6.6142C8.00584 6.60597 7.84937 6.60597 7.6929 6.60597C7.57475 6.60898 7.4585 6.63634 7.35141 6.68634C7.24432 6.73634 7.14871 6.80791 7.07055 6.89656C6.85643 7.1295 6.25761 7.69303 6.25761 8.84244C6.25761 9.99185 7.0929 11.0966 7.21055 11.253C7.32584 11.4095 8.85055 13.7613 11.1905 14.773C11.7435 15.0142 12.1788 15.1566 12.5188 15.2648C13.0776 15.4436 13.5823 15.4166 13.9847 15.3589C14.4317 15.2907 15.3623 14.7942 15.5588 14.2495C15.7517 13.7036 15.7517 13.2377 15.6929 13.1401C15.6353 13.0413 15.4788 12.9836 15.2458 12.8671Z" fill="#FE6809"/>
+									</svg>
+							</a>
+							<a href="#">
+								<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.6956 12.1407H15.4325L15.8622 9.22182H12.6951V7.62652C12.6951 6.41398 13.0725 5.33876 14.1529 5.33876H15.889V2.79153C15.5839 2.74829 14.9388 2.65363 13.7198 2.65363C11.1744 2.65363 9.6821 4.06485 9.6821 7.28V9.22182H7.06543V12.1407H9.6821V20.1634C10.2003 20.2452 10.7252 20.3007 11.264 20.3007C11.7511 20.3007 12.2264 20.2539 12.6956 20.1873V12.1407Z" fill="#FE6809"/>
+									</svg>
+							</a>
+						</div>
+					
+				</div>
+		
+			</div>
+		</div>
+		<div class="footer__copy">
+			<p>Copyright © <strong> iPremier Smart Home LLC</strong></p>
+			<div class="lumios">
+				Development by
+				<img src="./assets/images/lumios.svg" alt=" Development by lumios">
+			</div>
+		</div>
+	</div>
+	</footer>
+	<script src="./assets/js/jquery.js"></script>
+	<script src="./assets/js/lightbox.js"></script>
+	<script src="./assets/js/script.js"></script>
+</body>
+</html>
