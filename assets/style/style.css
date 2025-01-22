@@ -1531,6 +1531,7 @@ form fieldset input[type=radio]:checked:after {
   aspect-ratio: 302/300;
   height: -moz-fit-content;
   height: fit-content;
+  display: flex;
 }
 .work__gallery__item .simple {
   width: -moz-fit-content;
