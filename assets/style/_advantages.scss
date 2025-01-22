@@ -34,10 +34,13 @@
 			}
 		}
 		img{
-			max-width: 158px;
+			max-width: 138px;
 			aspect-ratio: 1;
 			border-radius: 50%;
 			object-fit: cover;
+			@media screen and (min-width:768px) {
+				max-width: 158px;
+			}
 		}
 		&__content{
 			display: flex;

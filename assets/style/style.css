@@ -968,11 +968,16 @@ form fieldset input[type=radio]:checked:after {
   }
 }
 .advantages__item img {
-  max-width: 158px;
+  max-width: 138px;
   aspect-ratio: 1;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .advantages__item img {
+    max-width: 158px;
+  }
 }
 .advantages__item__content {
   display: flex;
@@ -1017,10 +1022,10 @@ form fieldset input[type=radio]:checked:after {
   align-items: center;
   gap: 40px;
   transition: 0.3s linear;
-  animation: marqueeLine var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+  animation: marqueeLine var(--_animation-duration, 40s) var(--_animation-direction, reverse) linear infinite;
 }
 .marquee span {
-  color: var(--White, #FFF);
+  color: var(--white, #FFF);
   font-size: 60px;
   font-style: normal;
   font-weight: 400;
@@ -1556,7 +1561,7 @@ form fieldset input[type=radio]:checked:after {
 }
 @media screen and (min-width: 768px) {
   .connect {
-    padding-top: 520px;
+    padding-top: 189px;
   }
 }
 .connect__frame iframe {
@@ -2063,7 +2068,7 @@ form fieldset input[type=radio]:checked:after {
 @media screen and (min-width: 768px) {
   .footer__copy {
     flex-direction: row;
-    padding: 0;
+    padding: 0 0 0 25px;
   }
 }
 .footer__copy p {
@@ -2091,7 +2096,7 @@ form fieldset input[type=radio]:checked:after {
   padding: 19px 51px 19px 47px;
   background-color: #FE6809;
 }
-@media screen and (min-width: 768) {
+@media screen and (min-width: 768px) {
   .footer__copy .lumios {
     width: -moz-fit-content;
     width: fit-content;

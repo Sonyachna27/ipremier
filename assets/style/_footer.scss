@@ -137,7 +137,7 @@ border-left: 0.882px solid rgba(194, 194, 194, 0.40);
 		padding-top: 20px;
 		@media  screen and (min-width:768px) {
 			flex-direction: row;
-			padding: 0;
+			padding: 0 0 0 25px;
 		}
 		p{
 			font-size: 14px;
@@ -161,7 +161,7 @@ border-left: 0.882px solid rgba(194, 194, 194, 0.40);
 			gap: 15px;
 			padding: 19px 51px 19px 47px;
 			background-color: $--orange;
-			@media screen and (min-width:768) {
+			@media screen and (min-width:768px) {
 				width: fit-content;
 			}
 		}

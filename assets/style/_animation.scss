@@ -11,10 +11,10 @@
 		align-items: center;
 		gap: 40px;
 		transition: .3s linear;
-		animation: marqueeLine var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+		animation: marqueeLine var(--_animation-duration, 40s) var(--_animation-direction, reverse) linear infinite;
 	}
 	span{
-		color: var(--White, #FFF);
+		color: var(--white, #FFF);
 		
 		font-size: 60px;
 		font-style: normal;
