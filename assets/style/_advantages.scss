@@ -18,6 +18,10 @@
 			width: 57%;
 			padding: 60px;
 		}
+		@media screen and (min-width:768px) and (max-width:1023.9px) {
+		
+			padding: 45px;
+		}
 		@media screen and (min-width:768px) {
 			flex-direction: row;
 		}
@@ -30,7 +34,6 @@
 		&:nth-of-type(odd){
 			@media screen and (min-width:1024px) {
 				transform: rotate(-2deg);
-				
 			}
 		}
 		img{
@@ -54,6 +57,10 @@
 				display: flex;
 				align-items: center;
 				gap: 10px;
+				div{
+					display: flex;
+					color: $--orange;
+				}
 				span{
 					color: $--orange;
 				}
